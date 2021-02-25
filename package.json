@@ -1,0 +1,14 @@
+{
+  "name": "design-recreation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/snacksncode/design-recreation.git",
+  "author": "SteezyCodes <bartkom2002@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "watch-sass": "sass --watch styles/scss:styles/css"
+  }
+}
