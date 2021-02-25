@@ -1,1 +1,119 @@
-@use 'reset'
+@use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+$font-ns: 'Noto Serif', serif;
+$font-os: 'Open Sans', sans-serif;
+
+.container {
+    background-color: #EEECE7;
+    width: 50%;
+    font-family: $font-ns;
+    padding: 3rem 5rem 0rem 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    color: #EEECE7;
+    border: 1px solid #161311;
+    width: 50px;
+    display: flex;
+    text-align: center;
+    background-color: #161311;
+    justify-content: center;
+    height: 50px;
+    flex-direction: column;
+    border-radius: 50%;
+    &>p {
+        font-size: 1rem;
+        position: relative;
+        margin: 0;
+    }
+}
+.description {
+    color: #0D0C22;
+    & > h1 {
+        line-height: 1.2;
+        font-weight: 400;
+        font-size: 3rem;
+        font-family: $font-ns;
+    }
+    & > p {
+        line-height: 1.7;
+        font-family: $font-os;
+        color: #807E7C;
+    }
+    & > div {
+        color: #EEECE7;
+        background-color: #161311;
+        font-family: $font-os;
+        height: auto;
+        cursor: pointer;
+        width: min-content;
+        border-radius: 2px;
+        position: relative;
+        padding: .75rem 2.5rem;
+    }
+    & > div::after {
+        content: "";
+        position: absolute;
+        background-color: #161311;
+        bottom: -5px;
+        right: -5px;
+        width: 100%;
+        height: 2px;
+    }
+    & > div::before {
+        content: "";
+        position: absolute;
+        background-color: #161311;
+        bottom: -5px;
+        right: -5px;
+        width: 2px;
+        height: 100%;
+    }
+}
+
+.offer {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    & > p {
+        font-size: 12px;
+        font-family: $font-os;
+        font-weight: 700;
+    }
+    & > div {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .icon {
+        border: 1px solid black;
+        height: 50px;
+        width: 50px;
+        position: relative;
+        padding: .25rem;
+        border-radius: 50%;
+        margin: 1rem;
+        & > img {
+            width: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30px;
+        }
+    }
+    .text {
+        & > p {
+            margin: 0;
+        }
+    }
+}
+
+.pictures {
+    background-color: #222;
+    width: 50%;
+}
