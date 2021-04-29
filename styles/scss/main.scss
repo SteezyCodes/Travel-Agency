@@ -4,6 +4,10 @@
 $font-ns: 'Noto Serif', serif;
 $font-os: 'Open Sans', sans-serif;
 
+body {
+    overflow: hidden;
+}
+
 .container {
     background-color: #EEECE7;
     width: 50%;
@@ -11,104 +15,119 @@ $font-os: 'Open Sans', sans-serif;
     padding: 3rem 5rem 0rem 7rem;
     display: flex;
     flex-direction: column;
-}
-.logo {
-    color: #EEECE7;
-    border: 1px solid #161311;
-    width: 50px;
-    display: flex;
-    text-align: center;
-    background-color: #161311;
-    justify-content: center;
-    height: 50px;
-    flex-direction: column;
-    border-radius: 50%;
-    &>p {
-        font-size: 1rem;
-        position: relative;
-        margin: 0;
-    }
-}
-.description {
-    color: #0D0C22;
-    & > h1 {
-        line-height: 1.2;
-        font-weight: 400;
-        font-size: 3rem;
-        font-family: $font-ns;
-    }
-    & > p {
-        line-height: 1.7;
-        font-family: $font-os;
-        color: #807E7C;
-    }
-    & > div {
-        color: #EEECE7;
-        background-color: #161311;
-        font-family: $font-os;
-        height: auto;
-        cursor: pointer;
-        width: min-content;
-        border-radius: 2px;
-        position: relative;
-        padding: .75rem 2.5rem;
-    }
-    & > div::after {
-        content: "";
-        position: absolute;
-        background-color: #161311;
-        bottom: -5px;
-        right: -5px;
-        width: 100%;
-        height: 2px;
-    }
-    & > div::before {
-        content: "";
-        position: absolute;
-        background-color: #161311;
-        bottom: -5px;
-        right: -5px;
-        width: 2px;
-        height: 100%;
-    }
-}
-
-.offer {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    & > p {
-        font-size: 12px;
-        font-family: $font-os;
-        font-weight: 700;
-    }
-    & > div {
-        width: 100%;
-        height: 60px;
-        display: flex;
-        flex-direction: row;
-        
-    }
-    .icon {
-        border: 1px solid black;
-        height: 50px;
-        width: 50px;
-        position: relative;
-        padding: .25rem;
-        border-radius: 50%;
-        margin: 1rem;
-        & > img {
-            width: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 30px;
+    & > .first {
+        .logo {
+            color: #EEECE7;
+            border: 1px solid #161311;
+            width: 50px;
+            display: flex;
+            text-align: center;
+            background-color: #161311;
+            justify-content: center;
+            height: 50px;
+            flex-direction: column;
+            border-radius: 50%;
+            &>p {
+                font-size: 1rem;
+                position: relative;
+                margin: 0;
+            }
+        }
+        & > .description {
+            color: #0D0C22;
+            & > h1 {
+                line-height: 1.2;
+                font-weight: 400;
+                font-size: 3rem;
+                font-family: $font-ns;
+            }
+            & > p {
+                line-height: 1.7;
+                font-family: $font-os;
+                color: #807E7C;
+            }
+            & > div {
+                color: #EEECE7;
+                background-color: #161311;
+                font-family: $font-os;
+                height: auto;
+                cursor: pointer;
+                width: min-content;
+                border-radius: 2px;
+                position: relative;
+                padding: .75rem 2.5rem;
+            }
+            & > div::after {
+                content: "";
+                position: absolute;
+                background-color: #161311;
+                bottom: -5px;
+                right: -5px;
+                width: 100%;
+                height: 2px;
+            }
+            & > div::before {
+                content: "";
+                position: absolute;
+                background-color: #161311;
+                bottom: -5px;
+                right: -5px;
+                width: 2px;
+                height: 100%;
+            }
         }
     }
-    .text {
-        & > p {
-            margin: 0;
+    & > .second {
+        .offer {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            & > p {
+                font-size: 12px;
+                font-family: $font-os;
+                font-weight: 700;
+            }
+            & > div {
+                align-items: center;
+                width: 100%;
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                
+            }
+            .icon {
+                border: 1px solid #807E7C;
+                height: 50px;
+                width: 50px;
+                position: relative;
+                border-radius: 50%;
+                margin-right: 2rem;
+                & > i {
+                    position: absolute;
+                    top: 50%;
+                    font-size: 1.25rem;
+                    color: #807E7C;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                & > img {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 50%;
+                    color: #807E7C;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .text {
+                & > p {
+                    margin: 0;
+                }
+                & > p:last-of-type {
+                    color: #807E7C;
+                }
+            }
         }
     }
 }
@@ -116,4 +135,48 @@ $font-os: 'Open Sans', sans-serif;
 .pictures {
     background-color: #222;
     width: 50%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 60% 60%;
+    grid-gap: 3rem;
+    overflow: hidden;
+    flex-direction: row;
+    padding: 3rem 0rem 2rem 2rem;
+    & > .first-picture {
+        margin-right: 2rem;
+    }
+    & > div {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        & > .center {
+            font-size: 1.5rem;
+            position: absolute;
+            word-wrap: break-word;
+            font-family: $font-os;
+            bottom: 10%;
+            color: #EEECE7;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            & > .connector {
+                display: flex;
+                flex-direction: row;
+                & > .index {
+                    color: #807E7C;
+                    margin: 0 1.5rem 0 2rem;
+                }
+            }
+            & > .route {
+                margin-left: 3rem;
+            }
+        }
+        & > img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            background-position: center;
+            position: relative;
+        }
+    }
 }
