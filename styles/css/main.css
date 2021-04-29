@@ -9,9 +9,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-}
-
-body {
   overflow: hidden;
 }
 
@@ -64,6 +61,10 @@ body {
   border-radius: 2px;
   position: relative;
   padding: 0.75rem 2.5rem;
+  transition: 250ms all ease-in-out;
+}
+.container > .first > .description > div:hover {
+  background-color: black;
 }
 .container > .first > .description > div::after {
   content: "";
@@ -139,7 +140,6 @@ body {
   display: grid;
   grid-template-columns: 60% 60%;
   grid-gap: 3rem;
-  overflow: hidden;
   flex-direction: row;
   padding: 3rem 0rem 2rem 2rem;
 }
@@ -179,6 +179,76 @@ body {
   height: auto;
   background-position: center;
   position: relative;
+}
+
+@media only screen and (max-width: 630px) {
+  html, body {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container,
+.pictures {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .container > .first {
+    display: flex;
+    flex-direction: column;
+  }
+  .container > .first > .logo {
+    transform: scale(1.5);
+    margin: 5rem auto 2rem;
+  }
+  .container > .first > .description > h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .container > .first > .description > div {
+    margin: 0 auto;
+  }
+  .container > .second > .offer > p {
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+  }
+  .container > .second > .offer > div {
+    margin: 1rem 0;
+  }
+  .container > .second > .offer > div > .icon {
+    flex-shrink: 0;
+  }
+
+  .pictures {
+    padding: 2rem;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+  }
+  .pictures > div {
+    position: relative;
+  }
+  .pictures > div > img {
+    border-radius: 4px;
+  }
+  .pictures > div > .center {
+    bottom: 10%;
+    text-align: center;
+    width: 100%;
+  }
+  .pictures > div > .center > .connector {
+    justify-content: space-evenly;
+  }
+  .pictures > div > .center > .connector > .index {
+    margin: 0;
+  }
+  .pictures > div > .center > .route {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
